@@ -1,0 +1,37 @@
+{
+  "description": "Source-based ground truth for the synthetic training fixtures. Not an exploitability certification.",
+  "cases": [
+    {
+      "cve": "CVE-2020-8203",
+      "package": "lodash",
+      "function": "zipObjectDeep",
+      "expectedFunctionUsage": "reachable",
+      "callPath": [
+        "src/server.js: POST /api/preferences",
+        "src/controllers/preferences-controller.js: buildPreferenceResponse",
+        "src/services/preference-service.js: buildPreferenceDocument",
+        "src/lib/legacy-transform.js: toNestedDocument",
+        "lodash.zipObjectDeep"
+      ],
+      "securityQualification": "Field names are strict allowlisted; function-level reachability is established, but the vulnerable input precondition is not demonstrated."
+    },
+    {
+      "cve": "CVE-2021-23337",
+      "package": "lodash",
+      "function": "template",
+      "expectedFunctionUsage": "reachable",
+      "callPath": [
+        "src/services/message-service.js: trustedWelcomeTemplate = lodash.template(...)"
+      ],
+      "securityQualification": "The template string and options.variable are fixed and trusted, not attacker-controlled; the dangerous precondition is not established."
+    },
+    {
+      "cve": "CVE-2021-44906",
+      "package": "minimist",
+      "function": "setKey",
+      "expectedFunctionUsage": "not-observed",
+      "callPath": [],
+      "securityQualification": "minimist is installed but not imported anywhere in src/. Search coverage is limited to this repository and pinned commit."
+    }
+  ]
+}

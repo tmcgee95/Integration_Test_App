@@ -1,0 +1,39 @@
+{
+  "source": "SYNTHETIC_FIXTURE_NOT_A_REAL_SNYK_SCAN",
+  "note": "For offline testing of the AWS S3 -> Lambda -> AgentCore path. Replace with actual Snyk CLI output for real findings.",
+  "vulnerabilities": [
+    {
+      "id": "SNYK-JS-LODASH-567746",
+      "title": "Prototype Pollution",
+      "severity": "high",
+      "packageName": "lodash",
+      "version": "4.17.15",
+      "description": "CVE-2020-8203 affects the zipObjectDeep API when unsafe property paths are supplied. This fixture is synthetic.",
+      "from": ["snyk-reachability-lab@1.0.0", "lodash@4.17.15"],
+      "identifiers": {"CVE": ["CVE-2020-8203"]},
+      "vulnerableFunctions": ["zipObjectDeep"]
+    },
+    {
+      "id": "SNYK-JS-LODASH-1040724",
+      "title": "Code Injection",
+      "severity": "high",
+      "packageName": "lodash",
+      "version": "4.17.15",
+      "description": "CVE-2021-23337 affects lodash.template under unsafe variable configuration. This fixture is synthetic.",
+      "from": ["snyk-reachability-lab@1.0.0", "lodash@4.17.15"],
+      "identifiers": {"CVE": ["CVE-2021-23337"]},
+      "vulnerableFunctions": ["template"]
+    },
+    {
+      "id": "SNYK-JS-MINIMIST-2429795",
+      "title": "Prototype Pollution",
+      "severity": "high",
+      "packageName": "minimist",
+      "version": "1.2.5",
+      "description": "CVE-2021-44906 concerns minimist internals. This fixture is synthetic; the application does not import minimist.",
+      "from": ["snyk-reachability-lab@1.0.0", "minimist@1.2.5"],
+      "identifiers": {"CVE": ["CVE-2021-44906"]},
+      "vulnerableFunctions": ["setKey"]
+    }
+  ]
+}

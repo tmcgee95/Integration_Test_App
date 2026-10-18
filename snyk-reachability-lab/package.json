@@ -1,0 +1,18 @@
+{
+  "name": "snyk-reachability-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-only training application for Snyk dependency findings and GitHub function reachability analysis",
+  "main": "src/server.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "scan:normalize": "node scripts/normalize-snyk.mjs reports/snyk-results.json reports/normalized-findings.json",
+    "verify:deps": "npm ls lodash minimist --depth=0"
+  },
+  "dependencies": {
+    "lodash": "4.17.15",
+    "minimist": "1.2.5"
+  }
+}
